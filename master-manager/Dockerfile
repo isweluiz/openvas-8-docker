@@ -59,7 +59,7 @@ RUN apt-get update -y && \
         wget http://wald.intevation.org/frs/download.php/2169/openvas-manager-6.0.6.tar.gz && \
         wget http://wald.intevation.org/frs/download.php/2173/greenbone-security-assistant-6.0.6.tar.gz && \
         wget http://wald.intevation.org/frs/download.php/2141/openvas-cli-1.4.3.tar.gz && \
-	wget http://wald.intevation.org/frs/download.php/1975/openvas-smb-1.0.1.tar.gz && \
+	    wget http://wald.intevation.org/frs/download.php/1975/openvas-smb-1.0.1.tar.gz && \
     cd /openvas-src/ && \
         tar zxvf openvas-libraries-8.*.tar.gz && \
         tar zxvf openvas-scanner-5.*.tar.gz && \
@@ -129,7 +129,7 @@ RUN apt-get update -y && \
     ln -s /opt/nikto/nikto.pl /usr/local/bin/nikto.pl && \
     ln -s /opt/nikto/nikto.conf /etc/nikto.conf && \
     mkdir -p /openvas && \
-    wget https://svn.wald.intevation.org/svn/openvas/trunk/tools/openvas-check-setup --no-check-certificate -O /openvas/openvas-check-setup && \
+    wget https://svn.wald.intevation.org/svn/openvas/branches/tools-attic/openvas-check-setup --no-check-certificate -O /openvas/openvas-check-setup && \
     chmod a+x /openvas/openvas-check-setup && \
     apt-get clean -yq && \
     apt-get autoremove -yq && \
